@@ -1,12 +1,13 @@
 import java.util.*;
 
-public class MusicLibrary {
+public class MusicLibrary  {
   
   private ArrayList<Song> songs;
   private int currentSortField = 0;  // Unsorted
   
   public MusicLibrary() { 
     /* YOUR CONSTRUCTOR CODE HERE*/
+    songs = new ArrayList<Song>();
   }
   
   /* 
@@ -14,6 +15,7 @@ public class MusicLibrary {
    */
   public void addSong (Song song)
   {
+    songs.add(song);
   }
   
   /*
@@ -22,16 +24,15 @@ public class MusicLibrary {
    */
   public Song getSong (int num)
   {
-    return null;
+   if(num> -1 && num <songs.size())
+     return songs.get(num);
+   return null;
   }
   
   /*
    * Sort song list by title
    */
-  public void Sort ()
-  {
-     currentSortField = field;
-  }
+
   
   /*
    * Sort song list by a specific field
@@ -41,7 +42,7 @@ public class MusicLibrary {
    */
   public void Sort (int field)
   {
-    currentSortField = field;
+  
   }
   
   /*

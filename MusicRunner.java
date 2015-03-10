@@ -37,7 +37,7 @@ public class MusicRunner
       
       data = mr.getSongData();  // Get next line of song data
     }
-    
+    Ml.Sort(1);
     mr.close();
   }
 }

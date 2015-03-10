@@ -10,6 +10,7 @@ public class Song implements Comparable<Song> {
   
   // Default constructor.. you'll need to modify this
    public Song(String artist, String name,int year, double score, String notes) { 
+     super();
     this.artist = artist;
     this.name = name;
     this.year = year;
