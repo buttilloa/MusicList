@@ -42,9 +42,16 @@ public class MusicLibrary  {
    */
   public void Sort (int field)
   {
-   Arrays.sort(songs, Song.SongNameComparator);
-    for(String  name : songs.getName())
-      System.out.println(name);
+    if(field == 1){
+    Collections.sort(songs, new SongNameComparator());
+    }
+    else if (field ==2)
+    {
+     Collections.sort(songs, new SongArtistComparator());
+    }
+    for(Song  name : songs)
+      if(field ==1)System.out.println(name.getName());
+    else if(field ==2)System.out.println(name.getArtist());
   }
   
   /*
